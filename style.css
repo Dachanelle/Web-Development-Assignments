@@ -42,13 +42,14 @@ body{
 }
 
 #showcase{
-	background-image: url('showcase.jpg');
+	background-image: url('showcase.jpeg');
 	background-position: center right;
         background-repeat:no-repeat;
         background-size:cover;
 	min-height:300px;
 	margin-bottom: 30px;
-	text-align:center }
+	text-align:center; 
+}
 
 #showcase h1{
 	color:#FFF;

@@ -1,0 +1,19 @@
+p{
+	font-weight:bold;
+}
+
+a{text-decoration:none;
+	text-transform:capitalize;}
+
+
+.box1{
+	border: solid black 1px;
+}
+
+p.tc{
+text-align:center;
+}
+
+p.tn{
+text-align:right;
+}

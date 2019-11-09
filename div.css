@@ -1,0 +1,7 @@
+.box1{
+	background-image: url("abc.jpg");
+	background-repeat: repeat-x;
+}
+.highlight{
+background-color:yellow;
+}

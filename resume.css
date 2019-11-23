@@ -13,7 +13,7 @@ p.a{text-align:center;}
 p.b{text-align:left;}
 
 ul.square{
-	list-style:none outside none;
+	list-style-type:none outside none;
 }
 h2{
 	text-transform:uppercase;

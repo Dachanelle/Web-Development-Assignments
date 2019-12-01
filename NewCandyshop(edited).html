@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>My Website</title>
+  <link rel="stylesheet"  href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"/>
+  <!--Font Awesome-->
+  <!--custom css-->
+ <link rel="stylesheet" type="text/css" href="NewCandy.css">
+</head>
+
+<body>
+<header id="mainheader">
+  <p class="mainheader">  <img src="candy2.png" width="800px" height="200px" alt="CandyShop Logo">
+  </p>
+</header>
+<!--navbar-->
+<nav class="navbar">
+  <div class="navbar-center">
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="NewCandyshop(edited).html">Store</a></li>
+    </ul>
+    <!--div class="cart-btn">
+      <span class="nav-icon">
+        <i class="fas fa-cart-plus"></i>
+      </span>
+      <div class="cart-items">0</div>
+    </div>
+  </div-->
+</nav>
+<!--End of Navbar-->
+
+<!---------Shop Starts Here--------->
+   <section class="container content-section">
+            <h2 class="section-header">STORE ITEMS</h2>
+            <div class="shop-items">
+                <div class="shop-item">
+                    <span class="shop-item-title">Rock Candy</span>
+                    <img class="shop-item-image" src="rock candy.jpg">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">$19.99</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">Gummy Bear</span>
+                    <img width="300px" class="shop-item-image" src="gummies.png">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">$15.50</span>
+                        <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">Peanut Coated Candy Apple</span>
+                    <img width="250px" class="shop-item-image" src="peanut.jpg">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">$35.95</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">Rainbow Candy</span>
+                    <img class="shop-item-image" src="rainbow.jpg">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">$12.99</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="container content-section">
+
+            <div class="shop-items">
+                <div class="shop-item">
+                    <span class="shop-item-title">Rainbow Colored Candy</span>
+                    <img class="shop-item-image" src="coloredrainbow.png">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">$25.20</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">Cotton Candy</span>
+                    <img class="shop-item-image" src="cotton.jpg">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">$16.60</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+       
+              <!----------Shop Ends Here--------->
+
+            <!--------Cart Begins Here--------->
+  <section id="overcart">
+
+                <div class="cart-btn">
+                  <span class="nav-icon">
+                    <i class="fas fa-cart-plus"></i>
+                  </span>
+                  <div class="cart-items"></div>
+                </div>
+        <section class="container content-section">
+            <h2 class="section-header">CART</h2>
+            <div class="cart-row">
+              <div>
+                <span class="cart-item cart-header cart-column"></span>
+                <span class="cart-price cart-header cart-column">
+              </div>
+              </span>
+                <span class="cart-quantity cart-header cart-column"></span>
+            </div>
+            <div class="cart-items">
+            </div>
+    
+            <div class="cart-total">
+                <strong class="cart-total-title">Total</strong>
+                <br/> <br/> <br/>
+                <span class="cart-total-price">$</span>
+            </div>
+            <button class="btn btn-primary btn-purchase" type="button"><a href="#">PURCHASE</a> </button>
+        </section>  
+ </section>
+<!--Wallet Starts Here---->
+ <div  id="Wallet"> 
+<h2 > Wallet </h2>
+<input type="number" id="inputvalue" >
+<button id="addButton" onClick=" Wallet()" type="button">Add Money $$$</button>
+<h3 class="cash"> Wallet Balance$ <span id="balances"> </span> </h3>
+</div>$
+<!----Wallet Ends Here----->
+
+<script>
+function Wallet(){
+ var inputValue = parseFloat(document.getElementById('inputvalue').value);
+ var Balance = parseFloat(document.getElementById('balances').innerHTML);
+ var walletBalance = parseFloat(document.getElementById('walletBalance'));
+ var total = inputValue + Balance;
+
+console.log(total)
+  /*if(input<=0){
+    alert('Please enter a valid amount.');
+  }
+  else{
+    newBank = parseFloat(AmountInBank) + parseFloat(moneyToAdd);
+    AmountInBank = newBank;
+    console.log("Wallet() function money to be added is " + moneyToAdd + " and the new bank total is " + newBank);
+    newBank = parseFloat(newBank);
+    bank.innerHTML = newBank.toFixed(2);
+    document.getElementById('inputvalue').value="";
+  }*/
+</script>
+ <script type="text/javascript" src="NewCandy.js"></script>
+</body>
+</html>

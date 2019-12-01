@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>My Website</title>
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+    <style>
+      body {
+        font-family: 'Tangerine', serif;
+        font-size: 40px;
+        line-height:-10;
+      }
+
+html{
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    background-image: url('sweety1.jpg');
+    background-size: cover;
+    background-repeat:no-repeat;
+}
+
+#mainheader{ 
+    text-align:center;
+    height:550px;
+    width:100%;
+    }
+ 
+.mm{
+  color:red;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background: rgb(231, 226, 221);
+  z-index: 1;
+}
+.navbar-center {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+}
+.navbar ul{
+    padding:0;
+    list-style: none;
+}
+
+.navbar a{
+    color:black;
+    text-decoration:none;
+    font-size:35px;
+    padding-right:15px;
+    text-align:right;
+}
+.navbar a:hover{
+  font-size:50px;
+}
+
+.navbar li{
+    display:inline;
+    clear:bottom;
+}
+.navbar a:hover {
+    background-color: blue;
+}
+#bd{
+  float:left;
+  width:30%;
+  border-size:box-border;
+  text-align:center;
+  padding:10px;
+  clear:bottom;
+  background-color:white;
+  margin-bottom:0px;
+}
+
+.boox{
+
+}
+.color-overlay{
+  position:absolute;
+  top:0;
+  left:0;
+  background-color: #3b298a;
+  width:100%;
+ height:100vh;
+ opacity:0.7;
+}
+
+.mainheader{
+  padding-top:100px;
+}
+#container{
+  background-color: white;
+  width:100%;
+  height:100vh;
+}
+    </style>
+  </head>
+<body>
+<header id="mainheader">
+  <div class="color-overlay">
+   <p class="mainheader">  <img src="candy2.png" width="800px" height="200px" alt="CandyShop Logo">
+  </p>
+</div>
+</header>
+<!--navbar-->
+<nav class="navbar">
+  <div class="navbar-center">
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="NewCandyshop(edited).html" target="_blank">Store</a></li>
+      <li><a href="#container">Details</a></li>
+    </ul>
+</nav>
+<!--End of Navbar-->
+<div id="container">
+<div id="bd">
+<h3 class="boox">About </h3>
+ <p> Dacha's Candy Land is a shop that sells a variety of delicious sweets. 
+  From candy apples, to gummy worms, to even rainbow sweets. Every little treat.
+  All our sweets are made from scratch using our ingredients and every pick is done 
+  to order so we are never out of stock. <br/>
+  Opening Hours <br/>
+ <span class="mm"> Monday-Friday 8am-8pm <br/>
+  Saturday & Sunday 9am-10pm </span>
+</p>
+</div>
+<div id="bd">
+<h3 class="boox"> Ordering Online </h3>
+ <p>You can also order online by clicking the store button in the navbar. Or by calling 
+  <span class="mm"> 803-361-0269 <br/> Or by emailing me at dachanellea@gmail.com </span> or <span class="mm"> adachanelle@yahoo.com</span>
+</p>
+</div>
+<div id="bd">
+<h3 class="boox"> :) </h3>
+ <p> Sweets for Kids, adults, old people....everyone!! Dont Miss out on these sweets.
+  Come get one today
+</p>
+</div>
+</div>
+<footer id="ft">
+<p>Copyright &copy Dachanelle's Website</p>
+</footer>
+</body>
+
+</html>

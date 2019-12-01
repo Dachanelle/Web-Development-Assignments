@@ -1,0 +1,96 @@
+html{
+	background-image:url('sweety1.jpg');
+	background-size: cover;
+	background-repeat:no-repeat;
+	/*opacity: 0.7;*/
+}
+
+
+
+#mainheader{ 
+	background-color:;
+	text-align:center;
+ }
+
+
+
+#navbar{
+	background-color:gray;
+	color:white;
+	border: 1px solid gray;
+	opacity:0.5;
+}
+
+#navbar ul{
+	padding:0;
+	list-style: none;
+}
+
+#navbar li{
+	display:inline;
+	clear:bottom;
+}
+
+#navbar a{
+	color:#FFF;
+	text-decoration:none;
+	font-size:18px;
+	padding-right:15px;
+	text-align:right;
+}
+
+a:link{font-family: Helvetica 'Times New Roman' Arial Sans Serif; font-size:18px; }
+a:hover{
+	font-family: Helvetica, 'Times New Roman', Arial, Sans Serif;
+	font-size: 20px;
+
+}
+a:visited{
+	font-family: Helvetica 'Times New Roman' Arial Sans Serif;
+	color:yellow;
+	font-size:18px;
+}
+
+ button{
+ 	position:relative;
+ 	color:white;
+ 	left:-200px;
+ }
+
+
+#mm{
+	float:right;
+	margin-right:15px;
+	right:-50px;
+}
+
+#mm button{
+	float:right;
+	margin-right:20px;
+}
+
+#boxes{
+	float:left;
+	position:relative;
+	display:inline;
+}
+
+ .block{
+ 	position:relative;
+ 	/*margin: 20px 0px 20px 20px;*/
+ 	align-content: center;
+ 	box-sizing: border-box;
+ 	clear: bottom;
+ 	width:100%;
+ 	height:100%;
+ 	display-content: inline;
+ }
+
+
+ .block img{
+ 	margin: 50px;
+ 	box-sizing:border-box;
+ 	width:20%;
+ 	height: 20%;
+ }
+

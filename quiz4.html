@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<!--p class="grade"> I want to know if I passed or failed my exam </p>
+
+<script>
+
+function checkGrade(grade){
+	try{
+		if(grade<0) throw "err";
+		if (grade>100) throw "err" //Instead of two if statements use if(grade<0 || grade>100) throw "err"
+		if (grade<60) return "You failed";
+	    else return "You Passed!";
+	}
+	catch(err){
+		alert("Error:The input is out of range")
+	}
+}
+
+var grade=prompt("Please input grade") //defining a variable
+document.write(checkGrade(grade)); //calling a function
+</script-->
+
+<!-------New Html--------->
+
+<P> Please input your grade: <!--a number between 5 and 10:--> </P>
+<input id="grd" type="text">
+<button type="button" onclick="callGrade()"> Test Input</button>
+<p id="p01">HHH</p>
+
+<script>
+//not globally
+
+function callGrade(){
+	//var input_grade=prompt("Please input your grade:","");.....disabled because we are using items from the html 
+	var input_grade=document.getElementById("grd").value;
+	var message=document.getElementById("p01");
+	message.innerHTML=(checkGrade(input_grade));
+}
+
+
+function checkGrade(grade){
+	try{
+		if(grade<0) throw "err";
+		if (grade>100) throw "err" //Instead of two if statements use if(grade<0 || grade>100) throw "err"
+		if (grade<60) return "You failed";
+	    else return "You Passed!";
+	}
+	catch(err){
+		alert("Error:The input is out of range")
+	}
+
+//var grade=prompt("Please input grade") ------defining a variable
+//document.write(checkGrade(grade)); calling a function
+
+</script>
+<!--Related to Cart---->
+<script>
+//globally
+var inventory=10; //initial inventory price
+var wallet=0; //initial wallet price
+var price1=3.5; //initial price value
+var nCart=0; //number of items in cart initially
+function addfunctionName /*Whatever the onclick is*/ (){
+	var mfunctionName
+}
+
+
+</script>
+
+
+
+
+</body>
+
+
+
+
+<!--edited-->
+<script type="text/javascript">
+function purchaseClicked(amnt) {
+    if (amnt< walletAmount()){
+        alert('Sorry you have insufficient funds');
+    }
+    else {
+    alert('Thank you for your purchase')
+    var cartItems = document.getElementsByClassName('cart-items')[0]
+    while (cartItems.hasChildNodes()) {
+        cartItems.removeChild(cartItems.firstChild)
+    }
+    }
+    updateCartTotal()
+</script>
+</html>

@@ -1,0 +1,113 @@
+body{
+	background-color:/*#aed9fc*/#79bff7;
+	color:#555;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:16px;
+	line-height:1.6em;
+	/*margin:0;*/
+}
+
+
+.container{
+	width:80%;
+	margin:30px;
+	overflow:hidden;
+}
+
+#main-header{
+	background-color:#79bff7;
+	color:#FFF;
+	font-family: cursive,sans-serif;
+}
+
+#navbar{
+	background-color:#79bff7 ;
+	color:#FFF;
+}
+
+#navbar ul{
+	padding:0;
+	list-style: none;
+}
+
+#navbar li{
+	display:inline;
+}
+
+#navbar a{
+	color:#FFF;
+	text-decoration:none;
+	font-size:18px;
+	padding-right:15px;
+	text-align:right;
+
+}
+
+#showcase{
+	background-image: url('sweetie.jpg');
+	background-position: center right;
+    background-repeat:no-repeat;
+    background-size:cover;
+	min-height:100px;
+	margin-bottom: 100px;
+	text-align:center;
+	border: solid black 0.5px;
+}
+
+#showcase h1{
+	color:#1f0430;
+	font-size:60px;
+	line-height: 1.6em;
+	padding-top:30px;
+	font-family:'Monotype Corsiva', cursive, sans-serif;
+	font-weight: bold;
+	}
+
+	.lnav{
+		background-color: white;
+		opacity: 0.7;
+		margin: 10px 10px 10px 10px;
+		padding: 20px;
+		font-family: 'Monotype Corsiva';
+		border: 2px solid black;
+		width: 100px;
+		height: 600px;
+		position:relative;
+		overflow:auto;
+	}
+
+	.bd{
+		background-color:green;
+		opacity: 0.7;
+		margin: 10px 10px 10px 10px;
+		padding: 20px;
+		font-family: 'Monotype Corsiva';
+		border: 2px solid black;
+		width: 100px;
+		height: 600px;
+		position:relative;
+		overflow: auto;
+	
+	}
+
+	.rnav{
+	    background-color: red;
+		opacity: 0.7;
+		margin: 10px 10px 10px 10px;
+		padding: 20px;
+		font-family: 'Monotype Corsiva';
+		border: 2px solid black;
+		width: 200px;	
+		height: 600px;
+		position:relative;
+		overflow:auto;
+
+	}
+
+#box{
+	border:dashed black 1px;
+	margin: 30px;
+	width:100%;
+	height: 100%;
+	overflow: scroll;
+	}

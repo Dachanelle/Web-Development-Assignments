@@ -130,31 +130,30 @@
 <!--Wallet Starts Here---->
  <div  id="Wallet"> 
 <h2 > Wallet </h2>
-<input type="number" id="inputvalue" >
-<button id="addButton" onClick=" Wallet()" type="button">Add Money $$$</button>
-<h3 class="cash"> Wallet Balance$ <span id="balances"> </span> </h3>
+<input id="money" placeholder=""> <br>
+<button id="addMoneyButton" onclick="addMoney()">Add Money $$$</button>
+<h3 class="cash"> Wallet Balance$ <span id="bankAmount">0.00</span> </h3>
 </div>$
 <!----Wallet Ends Here----->
 
 <script>
-function Wallet(){
- var inputValue = parseFloat(document.getElementById('inputvalue').value);
- var Balance = parseFloat(document.getElementById('balances').innerHTML);
- var walletBalance = parseFloat(document.getElementById('walletBalance'));
- var total = inputValue + Balance;
-
-console.log(total)
-  /*if(input<=0){
-    alert('Please enter a valid amount.');
+var bank = document.getElementById('bankAmount');
+    var AmountInBank = parseFloat(bank.innerHTML)
+    var purchaseTotal = parseFloat(cart-item-total.innerHTML)
+function addMoney(){
+      moneyToAdd = parseFloat(document.getElementById('money').value);
+      if(!moneyToAdd ){
+        alert('Please enter a number amount.');
+      }
+      else{
+        newBank = parseFloat(AmountInBank) + parseFloat(moneyToAdd);
+        AmountInBank = newBank;
+        console.log("addMoney() function money to be added is " + moneyToAdd + " and the new bank total is " + newBank);
+        newBank = parseFloat(newBank);
+        bank.innerHTML = newBank.toFixed(2);
+        document.getElementById('money').value="";
   }
-  else{
-    newBank = parseFloat(AmountInBank) + parseFloat(moneyToAdd);
-    AmountInBank = newBank;
-    console.log("Wallet() function money to be added is " + moneyToAdd + " and the new bank total is " + newBank);
-    newBank = parseFloat(newBank);
-    bank.innerHTML = newBank.toFixed(2);
-    document.getElementById('inputvalue').value="";
-  }*/
+}
 </script>
  <script type="text/javascript" src="NewCandy.js"></script>
 </body>

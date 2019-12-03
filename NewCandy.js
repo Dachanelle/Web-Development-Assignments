@@ -1,3 +1,12 @@
+arrayname=[]
+arrayquantity=[]
+arrayprice=[]
+
+
+
+
+
+
 if (document.readyState == 'loading') {
     document.addEventListener('DOMContentLoaded', ready)
 } else {
@@ -11,7 +20,7 @@ function ready() {
         button.addEventListener('click', removeCartItem)
     }
 
-    var quantityInputs = document.getElementsByClassName('cart-quantity-input')
+   var quantityInputs = document.getElementsByClassName('cart-quantity-input')
     for (var i = 0; i < quantityInputs.length; i++) {
         var input = quantityInputs[i]
         input.addEventListener('change', quantityChanged)
@@ -26,14 +35,14 @@ function ready() {
     document.getElementsByClassName('btn-purchase')[0].addEventListener('click', purchaseClicked)
 }
 
-function purchaseClicked() {
+/*function purchaseClicked() {
     alert('Thank you for your purchase')
     var cartItems = document.getElementsByClassName('cart-items')[0]
     while (cartItems.hasChildNodes()) {
         cartItems.removeChild(cartItems.firstChild)
     }
     updateCartTotal()
-}
+}*/
 
 function removeCartItem(event) {
     var buttonClicked = event.target
@@ -99,5 +108,49 @@ function updateCartTotal() {
         total = total + (price * quantity)
     }
     total = Math.round(total * 100) / 100
-    document.getElementsByClassName('cart-total-price')[0].innerText = '$' + total;
+    document.getElementsByClassName('cart-total-price')[0].innerText = total;
 }
+ 
+
+
+function purchaseClicked(){
+
+var balanceOfTheWallet= document.getElementById("bankAmount").innerHTML
+var cartTotalBalance= document.getElementsByClassName('cart-total-price')[0].innerText
+
+if (+ cartTotalBalance <= +balanceOfTheWallet){
+
+ 
+var finalBalance= balanceOfTheWallet - cartTotalBalance
+
+document.getElementById("bankAmount").innerHTML = finalBalance;
+document.getElementsByClassName('cart-total-price')[0].innerText  = "0";
+
+
+
+
+ var cartItems = document.getElementsByClassName('cart-items')[0]
+    while (cartItems.hasChildNodes()) {cartItems.removeChild(cartItems.firstChild)};
+
+     var removeBody = document.getElementById("removeBody")
+    while (removeBody.hasChildNodes()) {removeBody.removeChild(removeBody.firstChild)}; 
+
+
+document.getElementById("receipt").innerHTML = 
+"<h2>Receipt</h2>" +
+"<br/> Items " +
+"<br/>Wallet Balance:" + balanceOfTheWallet +
+"<br/>Cart Total:" + cartTotalBalance +
+"<br/>Amount left in wallet:" + finalBalance;
+
+}
+
+    else { alert("Sorry you have insufficient funds!")};
+
+
+
+     }
+
+
+
+   

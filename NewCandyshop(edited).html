@@ -120,7 +120,7 @@
     
             <div class="cart-total">
                 <strong class="cart-total-title">Total</strong>
-                <br/> <br/> <br/>
+                <br/> <br/> <br/>$
                 <span class="cart-total-price">00</span>
             </div>
             <button class="btn btn-primary btn-purchase" type="button" onclick="purchaseClicked()"> PURCHASE</button>
@@ -132,7 +132,7 @@
 <h2 > Wallet </h2>
 <input id="money" placeholder=""> <br>
 <button id="addMoneyButton" onclick="addMoney()">Add Money $$$</button>
-<h3 class="cash"> Wallet Balance <span id="bankAmount">00</span> </h3>
+<h3 class="cash"> Wallet Balance $<span id="bankAmount">00</span> </h3>
 
 </div>
 <!----Wallet Ends Here----->
@@ -149,6 +149,7 @@ var bank = document.getElementById('bankAmount');
     var AmountInBank = parseFloat(bank.innerHTML)
     var purchaseTotal = parseFloat(cart-item-total.innerHTML)
 function addMoney(){
+      //(cartItemNames)
       moneyToAdd = parseFloat(document.getElementById('money').value);
       if(!moneyToAdd ){
         alert('Please enter a number amount.');

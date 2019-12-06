@@ -138,7 +138,6 @@ document.getElementsByClassName('cart-total-price')[0].innerText  = "0";
 
 document.getElementById("receipt").innerHTML = 
 "<h2>Receipt</h2>" +
-"<br/> Items " +
 "<br/>Wallet Balance:" + balanceOfTheWallet +
 "<br/>Cart Total:" + cartTotalBalance +
 "<br/>Amount left in wallet:" + finalBalance;

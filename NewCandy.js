@@ -1,6 +1,6 @@
-arrayname=[]
-arrayquantity=[]
-arrayprice=[]
+var cartItemNames = []
+var arrayquantity=[]
+var arrayprice=[]
 
 
 
@@ -105,15 +105,41 @@ function updateCartTotal() {
         var quantityElement = cartRow.getElementsByClassName('cart-quantity-input')[0]
         var price = parseFloat(priceElement.innerText.replace('$', ''))
         var quantity = quantityElement.value
-        total = total + (price * quantity)
+       // total = total + (price * quantity)
+        var itemNames = cartRow.getElementsByClassName("cart-item-title")[0]
+        var eachItemName = itemNames.innerHTML
+        //cartItemNames.push(eachItemName)
+       total = total + (price * quantity) //*****
+       // arrayquantity.push(quantity) //******
+/*****New Added Section ********/
+       var t_index = cartItemNames.indexOf(eachItemName);
+
+       if (t_index == -1){
+        cartItemNames.push(eachItemName);
+        arrayquantity.push(quantity);
+        arrayprice.push(price);
+       }
+       else {arrayquantity[t_index]=quantity};
+/*******End of New Added Section*******/
     }
+
     total = Math.round(total * 100) / 100
-    document.getElementsByClassName('cart-total-price')[0].innerText = total;
+    document.getElementsByClassName('cart-total-price')[0].innerText = total
 }
  
 
 
 function purchaseClicked(){
+var holdArray = cartItemNames;
+var cartTotalBalance= document.getElementsByClassName('cart-total-price')[0].innerText
+
+var holdArrayList = "<ul>"
+for (var i = 0; i< cartItemNames.length; i++) {
+holdArrayList += "<li>" + arrayquantity[i]  +  cartItemNames[i] + " for $ " + arrayprice[i]  + "</li>" };
+holdArrayList += "</ul>";
+
+
+
 
 var balanceOfTheWallet= document.getElementById("bankAmount").innerHTML
 var cartTotalBalance= document.getElementsByClassName('cart-total-price')[0].innerText
@@ -121,7 +147,7 @@ var cartTotalBalance= document.getElementsByClassName('cart-total-price')[0].inn
 if (+ cartTotalBalance <= +balanceOfTheWallet){
 
  
-var finalBalance= balanceOfTheWallet - cartTotalBalance
+var finalBalance= balanceOfTheWallet - cartTotalBalance;
 
 document.getElementById("bankAmount").innerHTML = finalBalance;
 document.getElementsByClassName('cart-total-price')[0].innerText  = "0";
@@ -129,7 +155,8 @@ document.getElementsByClassName('cart-total-price')[0].innerText  = "0";
 
 
 
- var cartItems = document.getElementsByClassName('cart-items')[0]
+
+ var cartItems = document.getElementsByClassName('cart-items')[0];
     while (cartItems.hasChildNodes()) {cartItems.removeChild(cartItems.firstChild)};
 
      var removeBody = document.getElementById("removeBody")
@@ -138,18 +165,16 @@ document.getElementsByClassName('cart-total-price')[0].innerText  = "0";
 
 document.getElementById("receipt").innerHTML = 
 "<h2>Receipt</h2>" +
-"<br/>Wallet Balance:" + balanceOfTheWallet +
-"<br/>Cart Total:" + cartTotalBalance +
-"<br/>Amount left in wallet:" + finalBalance;
+"<br/> Items: " + holdArrayList+ 
+"<br/>Wallet Amount: $" + balanceOfTheWallet +
+"<br/> Tax: $0" +
+"<br/>Cart Total: $" + cartTotalBalance +
+"<br/>Amount left in wallet: $" + finalBalance +
+"<br/><br/>Thank You For Shopping!";
 
 }
 
     else { alert("Sorry you have insufficient funds!")};
 
 
-
      }
-
-
-
-   

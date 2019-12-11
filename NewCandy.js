@@ -135,7 +135,7 @@ var cartTotalBalance= document.getElementsByClassName('cart-total-price')[0].inn
 
 var holdArrayList = "<ul>"
 for (var i = 0; i< cartItemNames.length; i++) {
-holdArrayList += "<li>" + arrayquantity[i]  +  cartItemNames[i] + " for $ " + arrayprice[i]  + "</li>" };
+holdArrayList += "<li>" + arrayquantity[i]  +  cartItemNames[i] + " for $ " + arrayprice[i]  + " each." + "</li>" };
 holdArrayList += "</ul>";
 
 
@@ -170,7 +170,8 @@ document.getElementById("receipt").innerHTML =
 "<br/> Tax: $0" +
 "<br/>Cart Total: $" + cartTotalBalance +
 "<br/>Amount left in wallet: $" + finalBalance +
-"<br/><br/>Thank You For Shopping!";
+"<br/><br/>Thank You For Shopping!  <br>" + 
+"<p><button type='button'><a href='NewCandyshop(edited).html'> Click to Shop Again </a> </button></p>";
 
 }
 
@@ -178,3 +179,5 @@ document.getElementById("receipt").innerHTML =
 
 
      }
+
+     

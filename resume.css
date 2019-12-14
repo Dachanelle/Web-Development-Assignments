@@ -1,3 +1,6 @@
+html{
+	min-width:60%;
+}
 body{ 
 	background-color:none;
 	font-size:15px;
@@ -13,7 +16,7 @@ p.a{text-align:center;}
 p.b{text-align:left;}
 
 ul.square{
-	list-style-type:none outside none;
+	list-style:none outside none;
 }
 h2{
 	text-transform:uppercase;
@@ -40,38 +43,35 @@ a:visited{
 	font-size:20px;
 }
 
-#lnav{
+/*#lnav{
 	
 	border:1px solid black;
 	float:left;
 	background-color:gray;
 	opacity:0.8;
-	width:25%; /*150px*/
+	width:25%; /*150px
 	height:100%;
 	padding:10px;
-	margin:10px 0px ;
+	margin:10px 0px /*10px 0px;
 	position: relative;
 	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-}
-}
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}*/
 #bd{
-	background-color: white;
-	border: 1px solid black;
+	background-color: none;
+	/*border: 1px solid black;*/
 	padding:10px;
-	margin:10px;
+	margin:10px/* 10px 10px 1*/0px;
 	float:left;
-        position:relative;
+    position:relative;
 	height:100%;
-	width:50%;/*842px*/
-	overflow:auto;
+	width:50%; /*842px*/
+	overflow: auto;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
-}
-
 
  #ft{
 	width:100%;
@@ -82,22 +82,43 @@ a:visited{
 	float:left;
 	height: 60px;
 	opacity:0.8;
+
 	}
+
+#lnav{
+	
+	border:1px solid black;
+	float:left;
+	background-color:gray;
+	opacity:0.8;
+	width:25%; /*150px*/
+	height:100%;
+	padding:10px;
+	margin:10px 0 /*10px 0px*/;
+	position: relative;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	display:inline;
+}
 
 	#rnav{
 	border:1px solid black;
 	float:right;
 	background-color:gray;
 	opacity:0.8;
-	width:25%; /*150px*/
+	width:25%;
 	height:100%;
 	padding:10px;
+	/*margin:10px 0px 10px 0px;*/
 	margin:10px 0;
 	position: relative;
+	background-color:grey;
+	box-sizing:border-box;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-}	
+	display:inline;
+
 	}
 
 ul.hList{
@@ -132,5 +153,4 @@ div.position{
     display: none; 
 }
 .container{overflow: -moz-scrollbars-none;}
-
 

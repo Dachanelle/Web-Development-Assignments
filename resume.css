@@ -46,11 +46,15 @@ a:visited{
 	float:left;
 	background-color:gray;
 	opacity:0.8;
-	width:20%; /*150px*/
+	width:25%; /*150px*/
 	height:100%;
 	padding:10px;
 	margin:10px 0px 10px 0px;
 	position: relative;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
 }
 #bd{
 	background-color: white;
@@ -60,8 +64,12 @@ a:visited{
 	float:left;
         position:relative;
 	height:100%;
-	width:53%;/*842px*/
-	overflow:scroll;
+	width:50%;/*842px*/
+	overflow:auto;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
 }
 
 
@@ -81,11 +89,15 @@ a:visited{
 	float:right;
 	background-color:gray;
 	opacity:0.8;
-	width:20%; /*150px*/
+	width:25%; /*150px*/
 	height:100%;
 	padding:10px;
 	margin:10px 0px 10px 0px;
 	position: relative;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}	
 	}
 
 ul.hList{
@@ -110,4 +122,15 @@ div.position{
 	text-indent: 0px;
 	padding: ;
 }
+
+
+.container {
+    -ms-overflow-style: none; 
+    scrollbar-width: none;  
+}
+.container::-webkit-scrollbar { 
+    display: none; 
+}
+.container{overflow: -moz-scrollbars-none;}
+
 
